@@ -12,7 +12,7 @@
     <nav>
       <button onclick="showSection('info')">Informacje</button>
       <button onclick="showSection('quiz')">Quizy</button>
-      <button onclick="showSection('admin')">Panel Admina</button>
+      <button onclick="requestAdminAccess()">Panel Admina</button>
     </nav>
   </header>
   <main>
@@ -59,4 +59,15 @@
   </main>
 
   <script src="quiz.js"></script>
+  <script>
+    function requestAdminAccess() {
+      const password = prompt("Podaj hasło administratora:");
+      if (password === "jebacnawrockiego") {
+        showSection('admin');
+      } else {
+        alert("Nieprawidłowe hasło.");
+      }
+    }
+  </script>
 </body>
+</html>
